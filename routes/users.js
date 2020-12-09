@@ -3,7 +3,6 @@ const passport = require('passport');
 const User = require('../models/user');
 const router = express.Router();
 const catchAsync = require('../utils/catchAsync');
-const { delete } = require('./campgrounds');
 
 
 
