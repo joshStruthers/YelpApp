@@ -8,7 +8,11 @@
 <div class="card" mb-3>
     <div class="row">
         <div class="col-md-4">
+            <% if(campground.images.length){ %> 
             <img class="img-fluid" alt="" src="<%=campground.images[0].url%>">
+            <% } else { %> 
+                <img class="img-fluid" alt="" src="https://res.cloudinary.com/dx0cd7wkw/image/upload/v1607632699/YelpCamp/xstzy4kii1sppnvt6glz.png">
+            <% } %> 
         </div>
         <div class="col-md-8">
             <div class="card-body">
