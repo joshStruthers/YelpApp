@@ -105,7 +105,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-const secret = precess.env.SECRET || 'thisisnotarealsecret';
+const secret = process.env.SECRET || 'thisisnotarealsecret';
 
 const store = new MongoStore({
     url: dbUrl,
@@ -167,6 +167,8 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err })
 })
 
+const port = process.env.PORT || 3000
+
 app.listen(3000, () => {
-    console.log("LISTENING ON PORT 3001");
+    console.log(`LISTENING ON PORT ${port}`);
 })
